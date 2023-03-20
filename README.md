@@ -1,4 +1,4 @@
-# Ylä-Otsikko
+# Otsikko
 
 ## Tehtävät
 
