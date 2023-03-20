@@ -1,11 +1,11 @@
-#Otsikko
+# Otsikko
 
 Tähän tulee tavallista tekstiä
 
-##Seuraavaksi lihavoituja kirjaimia
+## Seuraavaksi lihavoituja kirjaimia
 
 **B** **J** **k** **a**
 
-###Kursivoitu sana
+### Kursivoitu sana
 
 *sana*
