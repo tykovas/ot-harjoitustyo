@@ -1,6 +1,18 @@
-# Otsikko
+# Ohjelmistotuotanto
 
-## Tehtävät
+## SyntetisaattoriApp
+
+### Dokumentaatio 
+
+[Vaatimusmäärittely](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/vaatimusmaarittely.md)
+
+[Tuntikirjanpito](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/tuntikirjanpito.md)
+
+
+
+
+
+## Laskarit
 
 ### Viikko 1 
 
@@ -8,10 +20,3 @@
 
 [komentorivi.txt](https://github.com/tykovas/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-## Seuraavaksi lihavoituja kirjaimia
-
-**B** **J** **k** **a**
-
-### Kursivoitu sana
-
-*sana*
