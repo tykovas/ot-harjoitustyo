@@ -8,15 +8,6 @@
 
 [Tuntikirjanpito](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/tuntikirjanpito.md)
 
+[Changelog](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/changelog.md)
 
-
-
-
-## Laskarit
-
-### Viikko 1 
-
-[gitlog.txt](https://github.com/tykovas/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/tykovas/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
