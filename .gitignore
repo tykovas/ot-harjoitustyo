@@ -1,0 +1,5 @@
+synthesizerApp.code-workspace
+htmlcov
+.coverage
+.pytest_cache
+sinewave

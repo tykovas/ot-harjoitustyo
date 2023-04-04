@@ -3,7 +3,7 @@ import itertools
 import numpy as np
 
 class sine_oscillator:
-    def __init__(self,freq=440,sample_rate=44100):
+    def __init__(self,freq=1000,sample_rate=44100):
         self._freq = freq
         self._sample_rate = sample_rate
     
