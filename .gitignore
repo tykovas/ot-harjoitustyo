@@ -3,3 +3,5 @@ htmlcov
 .coverage
 .pytest_cache
 sinewave
+__pycache__
+
