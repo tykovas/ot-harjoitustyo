@@ -2,7 +2,7 @@ import math
 import itertools
 import numpy as np
 
-class sine_oscillator:
+class SineOscillator:
     def __init__(self,freq=1000,sample_rate=44100):
         self._freq = freq
         self._sample_rate = sample_rate
