@@ -1,5 +1,5 @@
 import unittest 
-from oscillator import sine_oscillator
+from synthesizer.oscillator import sine_oscillator
 # from main import main
 
 class TestSynth(unittest.TestCase):
