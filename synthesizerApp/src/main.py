@@ -1,15 +1,10 @@
-# from synthesizer.oscillator import SineOscillator
-# from wavetofile import wave_to_file
-# from sound import SoundPlayer
-import pygame as pg
-from synthesizer.synthesizer import Synthesizer
-from GUI.gui import *
+from gui.gui import GUI
+
 
 def main():
-    window = GUI()
+    GUI()
 
 
 if __name__ == "__main__":
     print("Pressing a-j on the keyboard will result in playback of a sinewave")
     main()
-
