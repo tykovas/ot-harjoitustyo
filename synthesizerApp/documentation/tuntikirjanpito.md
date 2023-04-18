@@ -10,5 +10,5 @@
 | 13.4 | 4  | Aiheeseen perehtymistä, testailua ja perustoiminnallisuuden  |
 | 17.4 | 2  | Toiminnallisuuden toteutusta|
 | 18.4 | 5 | Uusien lukkien toteustua ja testaamista |
-
+| yht | 26 |
 

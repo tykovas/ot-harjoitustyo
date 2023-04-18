@@ -7,8 +7,7 @@ Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi t
 ## Perusversion ominaisuudet ##
 
 - Käyttäjä voi muodostaa ääniaallon
-  - Ääniaallon voi muodostaa tiedostoksi tietokoneelle
-  - Käyttäjä voi soittaa äänen reaaliajassa käyttäen visuaalista käyttöliittymää 
+  - Käyttäjä voi soittaa äänen reaaliajassa käyttäen visuaalista käyttöliittymää/näppäimistöä [tehty]
 - Käyttäjä voi muokata tuotettua ääntä käyttöliittymässä
   - Vaihtamalla soitettavan äänen äänenvoimakkuutta
   - Suodattamalla ylätaajuuksia
@@ -17,7 +16,6 @@ Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi t
 
 ## Jatkokehitysiedat ##
 
-- Visuaalinen tai tietokoneen näppäimistöllä toimiva koskettimisto, jolla ääniä voi soittaa
 - Lisämahdollisuuksia äänen muokkamiseen
   - Vaihtoehtoisia oskilaattoreita, kuten kantti- ja kolmioaalto
   - Kaikuefekti
