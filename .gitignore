@@ -2,6 +2,8 @@ synthesizerApp.code-workspace
 htmlcov
 .coverage
 .pytest_cache
-sinewave
+sinewave.wav
 __pycache__
 ot-harjoitustyo.code-workspace
+test.py
+
