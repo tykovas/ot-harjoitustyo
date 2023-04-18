@@ -7,5 +7,5 @@
 ## Viikko 4
 
 - Toiminnalisuuden hajauttamista, arkkitehtuurin suunnittelua. 
-- Synthesizer ja Gui 
+- Synthesizer ja Gui luokat lisätty
 - Käyttäjä voi näppäimistöllään soittaa syntetisaattoria.
