@@ -10,4 +10,4 @@
 
 [Changelog](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/changelog.md)
 
-
+[Arkkitehtuuri](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/Arkkitehtuuri.md)
