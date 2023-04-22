@@ -1,6 +1,7 @@
 import pygame as pg
 from synthesizer.synthesizer import Synthesizer
 from gui.synthgui import SynthGui
+import pygame_gui as pgui 
 
 notes = {
     "c": 261.6,
@@ -20,19 +21,40 @@ notes = {
 
 class GUI:
     def __init__(self):
-        self.size = (800, 400)
+        
         pg.mixer.pre_init(channels=1, allowedchanges=1)
         pg.init()
-        pg.display.set_mode(self.size)
+        synthgui = SynthGui()
+        self.window = pg.display.set_mode(synthgui.size)
         pg.display.set_caption("Synthesizer")
+        self.background = pg.Surface(synthgui.size)
+        self.background.fill(pg.Color("lightseagreen"))
+
+        
+        self.clock = pg.time.Clock()
+
+
+
         self.synth = Synthesizer()
         self.synthgui = SynthGui()
+
         self.waveform = "sine"
         self.duration = 1
-        self._running = True
 
+        
+
+
+
+
+        self._running = True
         while self._running:
+            time_delta = self.clock.tick(60)/1000.0
             self.event()
+
+            synthgui.manager.update(time_delta)
+            self.window.blit(self.background,(0,0))
+            synthgui.manager.draw_ui(self.window)
+            pg.display.update()
         pg.quit()
 
     def event(self):
@@ -40,6 +62,7 @@ class GUI:
             if event.type == pg.KEYDOWN:
                 if event.key == pg.K_a:
                     self.synth.play(notes["c"], self.duration, self.waveform)
+                    print("a")
                 if event.key == pg.K_w:
                     self.synth.play(notes["c#"], self.duration, self.waveform)
                 if event.key == pg.K_s:
@@ -63,9 +86,14 @@ class GUI:
                 if event.key == pg.K_j:
                     self.synth.play(notes["b"], self.duration, self.waveform)
 
-            if event.type == pg.MOUSEBUTTONDOWN:
-                if self.synthgui.button1.collidepoint(event.pos):
-                    self.synth.play(2000,self.duration,self.waveform)
+            if event.type == pgui.UI_BUTTON_PRESSED:
+                if event.ui_element == self.synthgui.button_square:
+                    self.waveform = "square"
+                if event.ui_element == self.synthgui.button_sine:
+                    self.waveform = "sine"
+
             if event.type == pg.QUIT:
                 self._running = False
                 break
+
+            self.synthgui.manager.process_events(event)
