@@ -1,5 +1,6 @@
 import pygame as pg
 from synthesizer.synthesizer import Synthesizer
+from gui.synthgui import SynthGui
 
 notes = {
     "c": 261.6,
@@ -19,15 +20,17 @@ notes = {
 
 class GUI:
     def __init__(self):
-        self.size = (400, 400)
+        self.size = (800, 400)
         pg.mixer.pre_init(channels=1, allowedchanges=1)
-
         pg.init()
-        pg.display.set_mode(self.size, pg.HWSURFACE | pg.DOUBLEBUF)
+        pg.display.set_mode(self.size)
+        pg.display.set_caption("Synthesizer")
         self.synth = Synthesizer()
+        self.synthgui = SynthGui()
         self.waveform = "sine"
         self.duration = 1
         self._running = True
+
         while self._running:
             self.event()
         pg.quit()
@@ -60,6 +63,9 @@ class GUI:
                 if event.key == pg.K_j:
                     self.synth.play(notes["b"], self.duration, self.waveform)
 
+            if event.type == pg.MOUSEBUTTONDOWN:
+                if self.synthgui.button1.collidepoint(event.pos):
+                    self.synth.play(2000,self.duration,self.waveform)
             if event.type == pg.QUIT:
                 self._running = False
                 break
