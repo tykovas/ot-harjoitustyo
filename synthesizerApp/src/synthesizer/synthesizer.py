@@ -8,7 +8,7 @@ class Synthesizer:
         pg.mixer.pre_init(channels=1, allowedchanges=1)
         pg.init()
 
-    def generate_sound(self, freq=440, duration=2, waveform="square"):
+    def generate_sound(self, freq=440, duration=2, waveform="square", amp=0.5):
         sound = Oscillator(freq)
         if waveform == "sine":
             osc = sound.get_sine()
@@ -19,7 +19,8 @@ class Synthesizer:
         wav = [next(osc) for _ in range(44100*int(duration))]
         fadeoutarray = np.array(np.linspace(1,0,self.sustain))
         wav = np.array(wav)
-        wav = np.int16(wav * 0.1 * (2 ** 15 - 1))
+        amp = amp * 0.1
+        wav = np.int16(wav * amp * (2 ** 15 - 1))
 
         tmp = np.int16(wav[wav.size-self.sustain:] * fadeoutarray) # sustain length fadeout array
         wav = np.concatenate((wav[:wav.size-self.sustain],tmp))
@@ -29,8 +30,8 @@ class Synthesizer:
         self.sound = pg.sndarray.make_sound(wav)
         self.sound.play()
 
-    def play(self, freq, duration, waveform):
-        wav = self.generate_sound(freq, duration, waveform)
+    def play(self, freq, duration, waveform, amp):
+        wav = self.generate_sound(freq, duration, waveform, amp)
         self.output_sound(wav)
 
     def stop(self):
