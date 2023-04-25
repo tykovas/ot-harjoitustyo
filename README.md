@@ -14,6 +14,10 @@ Sovelluksella käyttäjä voi tietokoneen näppäimistöllä soittaa erilaisia �
 
 [Arkkitehtuuri](https://github.com/tykovas/ot-harjoitustyo/blob/master/synthesizerApp/documentation/Arkkitehtuuri.md)
 
+## Releases
+
+Release 1 (viikko 5)[https://github.com/tykovas/ot-harjoitustyo/releases/tag/viiko5]
+
 ## Asennus 
 
 1. Asenna tarvittavat riippuvuudet komennolla:
