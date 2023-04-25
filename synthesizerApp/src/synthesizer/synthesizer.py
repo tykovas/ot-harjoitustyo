@@ -7,7 +7,6 @@ class Synthesizer:
     def __init__(self):
         pg.mixer.pre_init(channels=1, allowedchanges=1)
         pg.init()
-        # self.sound = pg.sndarray.make_sound(np.empty(1, np.int16))
 
     def generate_sound(self, freq=440, duration=2, waveform="square"):
         sound = Oscillator(freq)
@@ -18,17 +17,12 @@ class Synthesizer:
         iter(osc)
         self.sustain = 20000
         wav = [next(osc) for _ in range(44100*int(duration))]
-        # print(wav)
         fadeoutarray = np.array(np.linspace(1,0,self.sustain))
         wav = np.array(wav)
         wav = np.int16(wav * 0.1 * (2 ** 15 - 1))
 
         tmp = np.int16(wav[wav.size-self.sustain:] * fadeoutarray) # sustain length fadeout array
-        # print(fadeoutarray)
-        # print(np.size(tmp))
-        # print(type(wav))
         wav = np.concatenate((wav[:wav.size-self.sustain],tmp))
-        # print(np.size(wav))
         return wav
 
     def output_sound(self, wav):

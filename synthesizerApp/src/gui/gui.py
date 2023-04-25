@@ -62,7 +62,6 @@ class GUI:
             if event.type == pg.KEYDOWN:
                 if event.key == pg.K_a:
                     self.synth.play(notes["c"], self.duration, self.waveform)
-                    print("a")
                 if event.key == pg.K_w:
                     self.synth.play(notes["c#"], self.duration, self.waveform)
                 if event.key == pg.K_s:
