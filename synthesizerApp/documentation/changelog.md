@@ -9,3 +9,9 @@
 - Toiminnalisuuden hajauttamista, arkkitehtuurin suunnittelua. 
 - Synthesizer ja Gui luokat lisätty
 - Käyttäjä voi näppäimistöllään soittaa syntetisaattoria.
+
+## Viikko 5 
+
+- Graafisen käyttöliittymän toteuttamista
+- Synthgui luokka luotu
+- Mahdollisuus vaihtaa soitettavaa ääniaaltoa, sekä äänen voimakkuutta käyttöliittymän avulla
