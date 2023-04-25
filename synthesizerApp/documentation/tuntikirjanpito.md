@@ -10,5 +10,8 @@
 | 13.4 | 4  | Aiheeseen perehtymistä, testailua ja perustoiminnallisuuden  |
 | 17.4 | 2  | Toiminnallisuuden toteutusta|
 | 18.4 | 5 | Uusien lukkien toteustua ja testaamista |
+| 21.4 | 3 | GUI |
+| 23.4 | 4 | GUI, kanttiaalto-oskilaattori |
+| 25.4 | 5 | GUI, Volume |
 | yht | 26 |
 
