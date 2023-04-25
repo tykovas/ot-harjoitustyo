@@ -9,7 +9,8 @@ Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi t
 - Käyttäjä voi muodostaa ääniaallon
   - Käyttäjä voi soittaa äänen reaaliajassa käyttäen visuaalista käyttöliittymää/näppäimistöä [tehty]
 - Käyttäjä voi muokata tuotettua ääntä käyttöliittymässä
-  - Vaihtamalla soitettavan äänen äänenvoimakkuutta
+  - Vaihtaa soitettavan ääniaallon muotoa (sini, kantti) [tehty]
+  - Vaihtamalla soitettavan äänen äänenvoimakkuutta [tehty]
   - Suodattamalla ylätaajuuksia
   - Muokkaamalla äänen syttymis- ja sammumisnopeuksia
 - Käyttäjä voi tallentaa äänen konfiguraation muistiin
