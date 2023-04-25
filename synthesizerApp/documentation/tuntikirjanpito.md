@@ -13,5 +13,5 @@
 | 21.4 | 3 | GUI |
 | 23.4 | 4 | GUI, kanttiaalto-oskilaattori |
 | 25.4 | 5 | GUI, Volume |
-| yht | 26 |
+| yht | 38 |
 
