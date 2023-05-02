@@ -1,7 +1,8 @@
 import pygame as pg
+import pygame_gui as pgui
 from synthesizer.synthesizer import Synthesizer
 from gui.synthgui import SynthGui
-import pygame_gui as pgui 
+from wavetofile import wave_to_file
 
 notes = {
     "c": 261.6,
@@ -34,10 +35,9 @@ key_to_note = {
 }
 
 
-
 class GUI:
     def __init__(self):
-        
+
         pg.mixer.pre_init(channels=1, allowedchanges=1)
         pg.init()
         synthgui = SynthGui()
@@ -46,35 +46,25 @@ class GUI:
         self.background = pg.Surface(synthgui.size)
         self.background.fill(pg.Color("antiquewhite"))
 
-        
         self.clock = pg.time.Clock()
-
-
 
         self.synth = Synthesizer()
         self.synthgui = SynthGui()
         self.synthgui.button_sine.select()
 
-        
-        self.waveform = "sine"
-        self.duration = 1
-        self.amp = 0.5
-        self.attack = 1
-        self.release = 0
-
-
-        
-
-
-
+        # self.waveform = "sine"
+        # self.duration = 1
+        # self.amp = 0.5
+        # self.attack = 0.1
+        # self.release = 0.1
 
         self._running = True
         while self._running:
             time_delta = self.clock.tick(60)/1000.0
             self.event()
             self.synthgui.manager.update(time_delta)
-            
-            self.window.blit(self.background,(0,0))
+
+            self.window.blit(self.background, (0, 0))
             self.synthgui.manager.draw_ui(self.window)
             pg.display.update()
         pg.quit()
@@ -83,32 +73,39 @@ class GUI:
         for event in pg.event.get():
             if event.type == pg.KEYDOWN and event.key in key_to_note:
                 note = notes[key_to_note[event.key]]
-                self.synth.play(note, self.duration, self.waveform, self.amp, self.release)
-
+                self.synth.play(note, self.synth.duration, self.synth.waveform,
+                                self.synth.amp, self.synth.release, self.synth.attack)
 
             if event.type == pgui.UI_BUTTON_PRESSED:
                 if event.ui_element == self.synthgui.button_square:
-                    self.waveform = "square"
-                    
+                    self.synth.waveform = "square"
+
                     self.synthgui.button_sine.unselect()
                     self.synthgui.button_square.select()
-                    
+
                 if event.ui_element == self.synthgui.button_sine:
-                    self.waveform = "sine"
+                    self.synth.waveform = "sine"
                     self.synthgui.button_sine.select()
                     self.synthgui.button_square.unselect()
 
+                if event.ui_element == self.synthgui.button_save:
+                    wav = self.synth.generate_sound(
+                        440, self.synth.duration, self.synth.waveform, self.synth.amp, self.synth.release, self.synth.attack)
+                    wave_to_file(wav, self.synth.waveform + ".wav", 44100)
+
             if event.type == pgui.UI_HORIZONTAL_SLIDER_MOVED:
                 if event.ui_element == self.synthgui.volume_slider:
-                    self.amp = self.synthgui.volume_slider.get_current_value()
-                
+                    self.synth.amp = self.synthgui.volume_slider.get_current_value()
+
                 if event.ui_element == self.synthgui.duration_slider:
-                    self.duration = self.synthgui.duration_slider.get_current_value()
+                    self.synth.duration = self.synthgui.duration_slider.get_current_value()
+                    print("d", self.synth.duration)
 
                 if event.ui_element == self.synthgui.release_slider:
-                    self.release = self.synthgui.release_slider.get_current_value()
+                    self.synth.release = self.synthgui.release_slider.get_current_value()
 
-            
+                if event.ui_element == self.synthgui.attack_slider:
+                    self.synth.attack = self.synthgui.attack_slider.get_current_value()
 
             if event.type == pg.QUIT:
                 self._running = False

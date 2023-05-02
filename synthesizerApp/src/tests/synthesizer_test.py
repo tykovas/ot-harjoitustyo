@@ -1,6 +1,7 @@
 import unittest
 from synthesizer.oscillator import Oscillator
 from synthesizer.synthesizer import Synthesizer
+from main import Main
 import numpy
 
 
@@ -16,4 +17,6 @@ class TestSynth(unittest.TestCase):
         self.gen = self.synth.generate_sound()
         assert type(self.gen[0]) is numpy.int16
 
-    # def 
+    def test_main_start(self):
+        self.run = Main()
+        self.assertNotEqual(self.run.gui.synth, None)
