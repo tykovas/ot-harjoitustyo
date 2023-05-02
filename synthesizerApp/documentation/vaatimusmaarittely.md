@@ -13,11 +13,13 @@ Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi t
   - Vaihtamalla soitettavan äänen äänenvoimakkuutta [tehty]
   - Kolmioaalto
   - Muokkaamalla äänen syttymis- ja sammumisnopeuksia
+  - Oktaavialan vaihto
 - Käyttäjä voi tallentaa äänen konfiguraation muistiin
 
 ## Jatkokehitysiedat ##
 
 - Lisämahdollisuuksia äänen muokkamiseen 
+  - Visuaalinen koskettimisto
   - Suodattamalla ylätaajuuksia
   - Kaikuefekti
   - Äänen parametrien modulointi mahdollisuuksia
