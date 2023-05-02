@@ -107,7 +107,6 @@ class GUI:
 
                 if event.ui_element == self.synthgui.release_slider:
                     self.release = self.synthgui.release_slider.get_current_value()
-                    print(self.release)
 
             
 

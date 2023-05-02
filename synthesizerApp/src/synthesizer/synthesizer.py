@@ -23,14 +23,10 @@ class Synthesizer:
 
         wav = np.array(wav)
         release = int(wav.size*release)
-        # release = 20000
         fadeoutarray = np.array(np.linspace(1,0,release))
 
         amp = amp * 0.1
-        print(release)
         wav = np.int16(wav * amp * (2 ** 15 - 1))
-        print(wav.size)
-        print(release)
         tmp = np.int16(wav[wav.size-release:] * fadeoutarray) # sustain length fadeout array
         wav = np.concatenate((wav[:wav.size-release],tmp))
         return wav
