@@ -90,7 +90,8 @@ class GUI:
 
                 if event.ui_element == self.synthgui.button_save:
                     wav = self.synth.generate_sound(
-                        440, self.synth.duration, self.synth.waveform, self.synth.amp, self.synth.release, self.synth.attack)
+                        440, self.synth.duration, self.synth.waveform,
+                        self.synth.amp, self.synth.release, self.synth.attack)
                     wave_to_file(wav, self.synth.waveform + ".wav", 44100)
 
             if event.type == pgui.UI_HORIZONTAL_SLIDER_MOVED:

@@ -5,16 +5,16 @@ from synthesizer.oscillator import Oscillator
 
 class Synthesizer:
     """Luokka, joka vastaa syntetisaattorin äänen tuottamisesta ja toistamisesta
-    
+
     Attributes: 
         waveform: toistettavan äänen ääniaalto
         duration: toistettavan äänen pituus sekuntteina
         amp: soitettavan äänen äänenvoimakkuus välillä 0-1
         attack: Nopeus jolla ääni syttyy täyteen äänenvoimakkuuteen
         relese: Nopeus jolla ääni sammuu
-    
+
     """
-    
+
     def __init__(self):
         """Luokan konstruktori, joka alustaa syntetisaattorin
         """
@@ -44,7 +44,7 @@ class Synthesizer:
 
         Returns: 
             numpy array joka kuvaa haluttua ääniaaltoa
-        
+
         """
         sound = Oscillator(freq)
 
@@ -76,7 +76,7 @@ class Synthesizer:
 
     def output_sound(self, wav):
         """Muodostaa pygamen sndarrayn, joka toistetaan käyttäjän äänentoistolaitteistosta
-        
+
         Args: 
             wav: array joka halutaan toistaa
         """

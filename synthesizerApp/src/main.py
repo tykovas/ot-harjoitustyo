@@ -7,6 +7,7 @@ class Main:
     Attributes: 
         gui: ohjelman visuaalinen käyttöliittymä 
     """
+
     def __init__(self):
         """ Luokan konstruktori, joka alustaa käyttöliittymän
 

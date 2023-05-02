@@ -5,13 +5,15 @@ import pygame_gui as pgui
 class SynthGui:
     def __init__(self):
         """Luokka, joka vastaa käyttöliittymän visuaalisten elementtien luomisesta
-        
+
         Attributes: 
             size: Luotavan ikkunan koko
             manager: pygame_gui:n käyttämä UIManager moduuli
             button_(square/sine): nappi, jolla käyttäjä voi valita käyttämänsä aaltomuodon
-            button_save: nappi, jolla käyttäjä voi tallentaa muodostamansa ääniaallon wav-tiedostoksi
-            (volume/duration/release/attack)_slider: Liukusäädin, jolla käyttäjä voi hallita Synth-luokan amp,duration,attack ja release -arvoja
+            button_save: nappi, jolla käyttäjä voi tallentaa muodostamansa 
+                ääniaallon wav-tiedostoksi
+            (volume/duration/release/attack)_slider: Liukusäädin, jolla käyttäjä voi hallita 
+                Synth-luokan amp,duration,attack ja release -arvoja
             (...)_text: Käyttöliittymään piirrettävän ohjetekstit
         """
         self.size = (800, 400)
@@ -40,9 +42,7 @@ class SynthGui:
             (30, 310), (200, 40))), start_value=0.1, value_range=(0, 1), manager=self.manager)
         self.attack_slider = pgui.elements.UIHorizontalSlider(relative_rect=(pg.Rect(
             (240, 310), (200, 40))), start_value=0.1, value_range=(0, 1), manager=self.manager)
-        
 
-        
         # Text
         self.volume_text = pgui.elements.UITextBox("Volume", relative_rect=(
             pg.Rect((500, 20), (200, 30))), manager=self.manager)
@@ -54,4 +54,3 @@ class SynthGui:
             pg.Rect((30, 280), (100, 30))), manager=self.manager)
         self.attack_text = pgui.elements.UITextBox("Attack", relative_rect=(
             pg.Rect((240, 280), (100, 30))), manager=self.manager)
-
