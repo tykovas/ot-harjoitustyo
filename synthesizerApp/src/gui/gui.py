@@ -18,6 +18,22 @@ notes = {
     "b": 493.9
 }
 
+key_to_note = {
+    pg.K_a: "c",
+    pg.K_w: "c#",
+    pg.K_s: "d",
+    pg.K_e: "d#",
+    pg.K_d: "e",
+    pg.K_f: "f",
+    pg.K_t: "f#",
+    pg.K_g: "g",
+    pg.K_y: "g#",
+    pg.K_h: "a",
+    pg.K_u: "a#",
+    pg.K_j: "b"
+}
+
+
 
 class GUI:
     def __init__(self):
@@ -39,9 +55,13 @@ class GUI:
         self.synthgui = SynthGui()
         self.synthgui.button_sine.select()
 
+        
         self.waveform = "sine"
         self.duration = 1
         self.amp = 0.5
+        self.attack = 1
+        self.release = 0
+
 
         
 
@@ -61,31 +81,10 @@ class GUI:
 
     def event(self):
         for event in pg.event.get():
-            if event.type == pg.KEYDOWN:
-                if event.key == pg.K_a:
-                    self.synth.play(notes["c"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_w:
-                    self.synth.play(notes["c#"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_s:
-                    self.synth.play(notes["d"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_e:
-                    self.synth.play(notes["d#"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_d:
-                    self.synth.play(notes["e"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_f:
-                    self.synth.play(notes["f"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_t:
-                    self.synth.play(notes["f#"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_g:
-                    self.synth.play(notes["g"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_y:
-                    self.synth.play(notes["g#"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_h:
-                    self.synth.play(notes["a"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_u:
-                    self.synth.play(notes["a#"], self.duration, self.waveform, self.amp)
-                if event.key == pg.K_j:
-                    self.synth.play(notes["b"], self.duration, self.waveform, self.amp)
+            if event.type == pg.KEYDOWN and event.key in key_to_note:
+                note = notes[key_to_note[event.key]]
+                self.synth.play(note, self.duration, self.waveform, self.amp, self.release)
+
 
             if event.type == pgui.UI_BUTTON_PRESSED:
                 if event.ui_element == self.synthgui.button_square:
@@ -102,6 +101,15 @@ class GUI:
             if event.type == pgui.UI_HORIZONTAL_SLIDER_MOVED:
                 if event.ui_element == self.synthgui.volume_slider:
                     self.amp = self.synthgui.volume_slider.get_current_value()
+                
+                if event.ui_element == self.synthgui.duration_slider:
+                    self.duration = self.synthgui.duration_slider.get_current_value()
+
+                if event.ui_element == self.synthgui.release_slider:
+                    self.release = self.synthgui.release_slider.get_current_value()
+                    print(self.release)
+
+            
 
             if event.type == pg.QUIT:
                 self._running = False
