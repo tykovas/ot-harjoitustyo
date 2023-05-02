@@ -100,7 +100,6 @@ class GUI:
 
                 if event.ui_element == self.synthgui.duration_slider:
                     self.synth.duration = self.synthgui.duration_slider.get_current_value()
-                    print("d", self.synth.duration)
 
                 if event.ui_element == self.synthgui.release_slider:
                     self.synth.release = self.synthgui.release_slider.get_current_value()

@@ -6,4 +6,5 @@ sinewave.wav
 __pycache__
 ot-harjoitustyo.code-workspace
 test.py
-
+sine.wav
+square.wav
