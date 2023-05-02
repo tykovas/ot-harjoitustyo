@@ -13,5 +13,8 @@
 | 21.4 | 3 | GUI |
 | 23.4 | 4 | GUI, kanttiaalto-oskilaattori |
 | 25.4 | 5 | GUI, Volume |
-| yht | 38 |
+| 28.4 | 4 | Attack ja release toiminnallisuutta, GUI|
+| 29.4 | 2 | GUI |
+| 2.5  | 4 | Attack ja release toiminnallisuutta, hajauttamista, GUI|
+| yht | 48 |
 
