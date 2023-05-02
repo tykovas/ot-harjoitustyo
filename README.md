@@ -18,6 +18,8 @@ Sovelluksella käyttäjä voi tietokoneen näppäimistöllä soittaa erilaisia �
 
 Release 1 [viikko 5](https://github.com/tykovas/ot-harjoitustyo/releases/tag/viiko5)
 
+Release 2 [viikko 6](https://github.com/tykovas/ot-harjoitustyo/releases/tag/viikko6)
+
 ## Asennus 
 
 1. Asenna tarvittavat riippuvuudet komennolla:
