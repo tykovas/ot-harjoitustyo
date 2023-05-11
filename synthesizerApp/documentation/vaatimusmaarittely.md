@@ -14,7 +14,7 @@ Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi t
   - Kolmioaalto
   - Muokkaamalla äänen syttymis- ja sammumisnopeuksia
   - Oktaavialan vaihto
-- Käyttäjä voi tallentaa äänen konfiguraation muistiin
+- Käyttäjä voi tallentaa ääniaallon wav-tiedostoksi tietokoneelleen
 
 ## Jatkokehitysiedat ##
 
