@@ -1,19 +1,17 @@
 # Vaatimusmäärittely #
 
 ## Sovelluksen tarkoitus ##
-Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi tuottaa oskillatorilla ja muokata tätä ääntä erilaisin menetelmin. Käyttäjä pystyy tallentamaan tuottamansa ääniaallon tiedostoksi tietokoneelleen, sekä tallentamaan äänen konfiguraation. 
+Sovellus on yksinkertainen digitaalinen syntetisaattori, jolla käyttäjä voi tuottaa oskillatorilla ja muokata tätä ääntä erilaisin menetelmin. Käyttäjä pystyy tallentamaan tuottamansa ääniaallon tiedostoksi tietokoneelleen.
 
 
 ## Perusversion ominaisuudet ##
 
 - Käyttäjä voi muodostaa ääniaallon
-  - Käyttäjä voi soittaa äänen reaaliajassa käyttäen visuaalista käyttöliittymää/näppäimistöä [tehty]
+  - Käyttäjä voi soittaa äänen reaaliajassa käyttäen näppäimistöäään
 - Käyttäjä voi muokata tuotettua ääntä käyttöliittymässä
-  - Vaihtaa soitettavan ääniaallon muotoa (sini, kantti) [tehty]
-  - Vaihtamalla soitettavan äänen äänenvoimakkuutta [tehty]
-  - Kolmioaalto
+  - Vaihtaa soitettavan ääniaallon muotoa (sini, kantti)
+  - Vaihtamalla soitettavan äänen äänenvoimakkuutta
   - Muokkaamalla äänen syttymis- ja sammumisnopeuksia
-  - Oktaavialan vaihto
 - Käyttäjä voi tallentaa ääniaallon wav-tiedostoksi tietokoneelleen
 
 ## Jatkokehitysiedat ##
