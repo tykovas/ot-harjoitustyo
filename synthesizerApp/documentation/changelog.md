@@ -18,8 +18,8 @@
 
 ## Viikko 6
 
--Graafisen käyttöliittymän toteuttamista 
--Mahdollisuus muokata äänen syttymis- ja sammumisnopeutta
--Käyttäjä voi tallentaa ääniaalon wav-tiedostoksi hakemistoon.
--Dokumentointia
--Main -luokka
+- Graafisen käyttöliittymän toteuttamista 
+- Mahdollisuus muokata äänen syttymis- ja sammumisnopeutta
+- Käyttäjä voi tallentaa ääniaalon wav-tiedostoksi hakemistoon.
+- Dokumentointia 
+- Main -luokka
