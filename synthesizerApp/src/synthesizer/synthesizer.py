@@ -65,7 +65,6 @@ class Synthesizer:
         amp = amp * 0.1
 
         wav = np.int16(wav * amp * (2 ** 15 - 1))
-        # sustain length fadeout array
         tmp = np.int16(wav[wav.size-release:] * fadeoutarray)
         tmpattack = np.int16(fadeinarray * wav[:attack])
 
@@ -99,5 +98,3 @@ class Synthesizer:
             freq, duration, waveform, amp, release, attack)
         self.output_sound(wav)
 
-    # def stop(self):
-    #     sound.stop()

@@ -52,12 +52,6 @@ class GUI:
         self.synthgui = SynthGui()
         self.synthgui.button_sine.select()
 
-        # self.waveform = "sine"
-        # self.duration = 1
-        # self.amp = 0.5
-        # self.attack = 0.1
-        # self.release = 0.1
-
         self._running = True
         while self._running:
             time_delta = self.clock.tick(60)/1000.0
