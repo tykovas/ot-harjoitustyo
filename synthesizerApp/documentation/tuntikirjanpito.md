@@ -16,5 +16,8 @@
 | 28.4 | 4 | Attack ja release toiminnallisuutta, GUI|
 | 29.4 | 2 | GUI |
 | 2.5  | 4 | Attack ja release toiminnallisuutta, hajauttamista, GUI|
-| yht | 48 |
+| 5.5 | 3 | Save-toiminto, GUI |
+| 11.5 | 5 | Testailua, GUI|
+| 14.5 | 4 | Viimeistelyä, siistimistä, testailua|
+| yht | 60 |
 
