@@ -20,7 +20,7 @@ Release 1 [viikko 5](https://github.com/tykovas/ot-harjoitustyo/releases/tag/vii
 
 Release 2 [viikko 6](https://github.com/tykovas/ot-harjoitustyo/releases/tag/viikko6)
 
-# Python -versio
+## Python -versio
 
 Sovellus on testattu ja todettu toimivaksi Python-versiolla 3.8. Uudemmilla tai vanhemmilla versioilla ohjelma ei välttämättä toimi halutulla tavalla. 
 
